@@ -32,7 +32,7 @@ int main() {
   cin >> average_row;
 
   average = calc_average(nowatab, size_kolumn, average_row);
-  cout << sred;
+  cout << average;
 
   return 0;
 }
