@@ -20,9 +20,9 @@ int main() {
   cout << "wprowadz ilosc kolumn: " << endl;
   cin >> size_kolumn;
 
-  int **nowatab = tworz(size_row, size_kolumn);
+  int **nowatab = create_tab(size_row, size_kolumn);
 
-  create_tab(nowatab, size_row, size_kolumn);
+  fill_tab(nowatab, size_row, size_kolumn);
 
   cout << "twoja tablica: " << endl;
   print(nowatab, size_row, size_kolumn);
@@ -49,7 +49,7 @@ void print(int **tab, int size_row, int size_kolumn)
   }
 }
 
-void create_tab(int **tab, int size_row, int size_kolumn)
+void fill_tab(int **tab, int size_row, int size_kolumn)
 {
 
   for (int i = 0; i < size_row; i++)
@@ -76,7 +76,7 @@ double calc_average(int **tab, int size_kolumn, int average_row)
 }
 
 
-int **tworz(int size_rowy, int size_kol)
+int **create_tab(int size_rowy, int size_kol)
 {
   int **nowatab = new int *[size_rowy];
 
